@@ -1,0 +1,154 @@
+:root {
+    --result-ButtonColor: #000;
+    --backgroundButton: #FFF;
+    --opButton: #4B5EFC;
+    --grayButton: #D2D3DA;
+    --buttonHover: #E0E0E0;
+    --backgroundImage: url("../img/background.png");
+    --backgroundImageBkp: url("../img/background.png");
+
+    --darkResult-ButtonColor: #FFF;
+    --darkBackgroundButton: #2E2F38;
+    --darkBackgroundImage: url("../img/background_dark.png");
+    --darkGrayButton: #4E505F;
+    --darkButtonHover: #0F0F0F;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.celular {
+    width: 367px;
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--backgroundImage);
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+    width: 306px;
+    height: 568px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.toggle {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.toggle:before {
+    content: '☀️';
+}
+
+.toggle.active:before {
+    content: '🌒';
+}
+
+.toggle.animate {
+    animation: animate .3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.calculadora {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-visor {
+    width: 85%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.visor-calculate {
+    padding: 0 10px;
+    color: #919191;
+    font-size: 26px;
+}
+
+.visor-result {
+    padding: 0 10px;
+    color: var(--result-ButtonColor);
+    font-size: 60px;
+}
+
+.calc-teclado {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teclado-linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teclado-botao {
+    width: 62px;
+    height: 62px;
+    background-color: var(--backgroundButton);
+    color: var(--result-ButtonColor);
+    border-radius: 20px;
+    margin: 8px;
+    font-weight: 400;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.op {
+    color: #FFF;
+    background-color: #4b5efc;
+}
+
+.gray {
+    background-color: var(--grayButton);
+}
+
+.teclado-botao:hover {
+    background-color: var(--buttonHover);
+}

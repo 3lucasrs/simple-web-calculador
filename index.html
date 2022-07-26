@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <meta name="description" content="Calculadora simples com dark mode by Lucas Silva">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/13cc0479e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="celular">
+        <span class="toggle"></span>
+
+        <div class="calculadora">
+            <div class="calc-visor">
+                <p class="visor-calculate"></p>
+                <p class="visor-result">0</p>
+            </div>
+            <div class="calc-teclado">
+                <div class="teclado-linha">
+                    <div onclick="reset()" class="teclado-botao gray">C</div>
+                    <div onclick="moreless()" class="teclado-botao gray">±</div>
+                    <div onclick="percent()" class="teclado-botao gray">%</div>
+                    <div onclick="insert('/')" class="teclado-botao op">÷</div>
+                </div>
+                <div class="teclado-linha">
+                    <div onclick="insert(7)" class="teclado-botao c">7</div>
+                    <div onclick="insert(8)" class="teclado-botao c">8</div>
+                    <div onclick="insert(9)" class="teclado-botao c">9</div>
+                    <div onclick="insert('*')" class="teclado-botao op">×</div>
+                </div>
+                <div class="teclado-linha">
+                    <div onclick="insert(3)" class="teclado-botao c">4</div>
+                    <div onclick="insert(5)" class="teclado-botao c">5</div>
+                    <div onclick="insert(6)" class="teclado-botao c">6</div>
+                    <div onclick="insert('-')" class="teclado-botao op">-</div>
+                </div>
+                <div class="teclado-linha">
+                    <div onclick="insert(1)" class="teclado-botao c">1</div>
+                    <div onclick="insert(2)" class="teclado-botao c">2</div>
+                    <div onclick="insert(3)" class="teclado-botao c">3</div>
+                    <div onclick="insert('+')" class="teclado-botao op">+</div>
+                </div>
+                <div class="teclado-linha">
+                    <div onclick="insert('.')" class="teclado-botao c">.</div>
+                    <div onclick="insert(0)" class="teclado-botao c">0</div>
+                    <div onclick="deleteLast()" class="teclado-botao c">⌫</div>
+                    <div onclick="result()" class="teclado-botao op">=</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/darktheme.js"></script>
+</body>
+
+</html>
